@@ -1,66 +1,315 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title></title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-  <link rel="stylesheet" href="styles.css" />
-
-</head>
-
-<body>
-
-
-  <div class="container-fluid">
-    <div class="row">
-
-      <!-- SIDEBAR -->
-      <nav class="col-md-2 sidebar d-flex flex-column align-items-center">
-        <div class="d-flex align-items-center mb-5 w-100 px-3" style="height:60px;">
-          <img src="images/wallet-icon.svg" alt="Logo Fintech" width="40" height="40" class="me-2">
-          <span class="fw-bold text-light fs-5">Fintech</span>
-        </div>
-
-        <button class="btn btn-light mb-4">+ Nova Transação</button>
-
-        <ul class="nav flex-column w-100 mb-5">
-          <li class="nav-item mb-2">
-            <a class="nav-link d-flex align-items-center text-light gap-3" href="#">
-              <img src="images/home-icon.svg"width="20">Início</a></li>
-          <li class="nav-item mb-2">
-            <a class="nav-link d-flex align-items-center text-light gap-3" href="#">
-              <img src="images/transaction-icon.svg"width="20">Transações</a></li>
-          <li class="nav-item mb-2">
-            <a class="nav-link d-flex align-items-center text-light gap-3" href="#">
-              <img src="images/report-icon.svg"width="20">Relatórios</a></li>
-          <li class="nav-item mb-2">
-            <a class="nav-link d-flex align-items-center text-light gap-3" href="#">
-              <img src="images/goal-icon.svg"width="20">Metas</a></li>
-        </ul>
-
-        <div class="d-flex mt-auto">
-          <div class=" mt-auto">
-            <img src="images/profile-icon.svg" alt="Logo Profile" width="40" height="40" class="me-2">
-        </div>
-          <div class="mt-auto text-center">
-            <span class="fw-bold text-light">João Silva</span> <br>
-            <a href="#" class="text-secondary small">Ver perfil</a>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 sidebar d-flex flex-column align-items-center">
+          <div
+            class="d-flex align-items-center mb-5 w-100 px-3"
+            style="height: 60px"
+          >
+            <img
+              src="images/wallet-icon.svg"
+              alt="Logo Fintech"
+              width="40"
+              height="40"
+              class="me-2"
+            />
+            <span class="fw-bold text-light fs-5">Fintech</span>
           </div>
-        </div>
-      </nav>
+
+          <button class="btn btn-light mb-4">+ Nova Transação</button>
+
+          <ul class="nav flex-column w-100 mb-5">
+            <li class="nav-item mb-2">
+              <a
+                class="nav-link d-flex align-items-center text-light gap-3"
+                href="#"
+              >
+                <img src="images/home-icon.svg" width="20" />Início</a
+              >
+            </li>
+            <li class="nav-item mb-2">
+              <a
+                class="nav-link d-flex align-items-center text-light gap-3"
+                href="#"
+              >
+                <img
+                  src="images/transaction-icon.svg"
+                  width="20"
+                />Transações</a
+              >
+            </li>
+            <li class="nav-item mb-2">
+              <a
+                class="nav-link d-flex align-items-center text-light gap-3"
+                href="#"
+              >
+                <img src="images/report-icon.svg" width="20" />Relatórios</a
+              >
+            </li>
+            <li class="nav-item mb-2">
+              <a
+                class="nav-link d-flex align-items-center text-light gap-3"
+                href="#"
+              >
+                <img src="images/goal-icon.svg" width="20" />Metas</a
+              >
+            </li>
+          </ul>
+
+          <div class="d-flex mt-auto">
+            <div class="mt-auto">
+              <img
+                src="images/profile-icon.svg"
+                alt="Logo Profile"
+                width="40"
+                height="40"
+                class="me-2"
+              />
+            </div>
+            <div class="mt-auto text-center">
+              <span class="fw-bold text-light">João Silva</span> <br />
+              <a href="#" class="text-secondary small">Ver perfil</a>
+            </div>
+          </div>
+        </nav>
+
+        <main class="col-md-10 ms-sm-auto px-4 py-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex gap-3 align-items-center">
+              <h4 class="text-light">Transações</h4>
+              <div class="btn-group" role="group" aria-label="Filtro tipo">
+                <button type="button" class="btn btn-secondary btn-sm">
+                  Todas
+                </button>
+                <button type="button" class="btn btn-outline-secondary btn-sm">
+                  Receitas
+                </button>
+                <button type="button" class="btn btn-outline-secondary btn-sm">
+                  Despesas
+                </button>
+              </div>
+            </div>
+            <div class="d-flex gap-2">
+              <input
+                class="form-control bg-dark text-light border-0"
+                type="search"
+                placeholder="Buscar transações"
+              />
+              <select class="form-select bg-dark text-light border-0">
+                <option>Todas categorias</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-md-4">
+              <div class="card card-bg text-success">
+                <div class="card-body">
+                  <div class="fw-bold">Total Filtrado</div>
+                  <div class="fs-5">+ R$ 4.231,00</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-bg text-light">
+                <div class="card-body">
+                  <div class="fw-bold">Transações</div>
+                  <div class="fs-5">10</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-bg text-light">
+                <div class="card-body">
+                  <div class="fw-bold">Período</div>
+                  <div class="fs-5">Outubro 2025</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-bg">
+            <div class="card-body">
+              <div
+                class="card card-list-item d-flex justify-content-between align-items-center px-3 py-2 mb-2"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="badge rounded-circle bg-success me-2"
+                    >&uarr;</span
+                  >
+                  <div>
+                    <div class="fw-bold text-light">Salário mensal</div>
+                    <span class="badge bg-secondary me-1">Salário</span>
+                    <span class="text-light small">30 de setembro de 2025</span>
+                  </div>
+                </div>
+                <div class="fw-bold text-success">+ R$ 5.500,00</div>
+              </div>
+              <div
+                class="card card-list-item d-flex justify-content-between align-items-center px-3 py-2 mb-2"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="badge rounded-circle bg-danger me-2"
+                    >&darr;</span
+                  >
+                  <div>
+                    <div class="fw-bold text-light">Supermercado</div>
+                    <span class="badge bg-secondary me-1">Alimentação</span>
+                    <span class="small text-light">01 de outubro de 2025</span>
+                  </div>
+                </div>
+                <div class="fw-bold text-danger">- R$ 450,00</div>
+              </div>
+              <div
+                class="card card-list-item d-flex justify-content-between align-items-center px-3 py-2 mb-2"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="badge rounded-circle bg-danger me-2"
+                    >&darr;</span
+                  >
+                  <div>
+                    <div class="fw-bold text-light">Uber</div>
+                    <span class="badge bg-secondary me-1">Transporte</span>
+                    <span class="small text-light">02 de outubro de 2025</span>
+                  </div>
+                </div>
+                <div class="fw-bold text-danger">- R$ 35,00</div>
+              </div>
+              <div
+                class="card card-list-item d-flex justify-content-between align-items-center px-3 py-2 mb-2"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="badge rounded-circle bg-success me-2"
+                    >&uarr;</span
+                  >
+                  <div>
+                    <div class="fw-bold text-light">Projeto web</div>
+                    <span class="badge bg-secondary me-1 text-light"
+                      >Freelance</span
+                    >
+                    <span class="small text-light">03 de outubro de 2025</span>
+                  </div>
+                </div>
+                <div class="fw-bold text-success">+ R$ 1.200,00</div>
+              </div>
+              <div
+                class="card card-list-item d-flex justify-content-between align-items-center px-3 py-2 mb-2"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="badge rounded-circle bg-danger me-2"
+                    >&darr;</span
+                  >
+                  <div>
+                    <div class="fw-bold text-light">Aluguel</div>
+                    <span class="badge bg-secondary me-1 text-light"
+                      >Moradia</span
+                    >
+                    <span class="small text-light">04 de outubro de 2025</span>
+                  </div>
+                </div>
+                <div class="fw-bold text-danger">- R$ 1.800,00</div>
+              </div>
+              <div
+                class="card card-list-item d-flex justify-content-between align-items-center px-3 py-2 mb-2"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="badge rounded-circle bg-danger me-2"
+                    >&darr;</span
+                  >
+                  <div>
+                    <div class="fw-bold text-light">Cinema</div>
+                    <span class="badge bg-secondary me-1">Lazer</span>
+                    <span class="small text-light">05 de outubro de 2025</span>
+                  </div>
+                </div>
+                <div class="fw-bold text-danger">- R$ 60,00</div>
+              </div>
+              <div
+                class="card card-list-item d-flex justify-content-between align-items-center px-3 py-2 mb-2"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="badge rounded-circle bg-danger me-2"
+                    >&darr;</span
+                  >
+                  <div>
+                    <div class="fw-bold text-light">Farmácia</div>
+                    <span class="badge bg-secondary me-1">Saúde</span>
+                    <span class="small text-light">06 de outubro de 2025</span>
+                  </div>
+                </div>
+                <div class="fw-bold text-danger">- R$ 120,00</div>
+              </div>
+              <div
+                class="card card-list-item d-flex justify-content-between align-items-center px-3 py-2 mb-2"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="badge rounded-circle bg-success me-2"
+                    >&uarr;</span
+                  >
+                  <div>
+                    <div class="fw-bold text-light">Dividendos</div>
+                    <span class="badge bg-secondary me-1">Investimentos</span>
+                    <span class="small text-light">07 de outubro de 2025</span>
+                  </div>
+                </div>
+                <div class="fw-bold text-success">+ R$ 280,00</div>
+              </div>
+              <div
+                class="card card-list-item d-flex justify-content-between align-items-center px-3 py-2 mb-2"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="badge rounded-circle bg-danger me-2"
+                    >&darr;</span
+                  >
+                  <div>
+                    <div class="fw-bold text-light">Curso online</div>
+                    <span class="badge bg-secondary me-1">Educação</span>
+                    <span class="small text-light">08 de outubro de 2025</span>
+                  </div>
+                </div>
+                <div class="fw-bold text-danger">- R$ 199,00</div>
+              </div>
+              <div
+                class="card card-list-item d-flex justify-content-between align-items-center px-3 py-2 mb-2"
+              >
+                <div class="d-flex align-items-center">
+                  <span class="badge rounded-circle bg-danger me-2"
+                    >&darr;</span
+                  >
+                  <div>
+                    <div class="fw-bold text-light">Restaurante</div>
+                    <span class="badge bg-secondary me-1">Alimentação</span>
+                    <span class="small text-light">09 de outubro de 2025</span>
+                  </div>
+                </div>
+                <div class="fw-bold text-danger">- R$ 85,00</div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"></script>
-</body>
-
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
